@@ -1,6 +1,6 @@
 # Openetwork MCP Setup
 
-Use this reference when Openetwork MCP tools are unavailable or tool calls fail because authentication is missing or expired.
+Use this reference when the Openetwork MCP server is not connected or tool calls fail because authentication is missing or expired.
 
 ## OAuth
 
@@ -75,11 +75,9 @@ Say:
 
 ## Required Capabilities
 
-The MCP server should expose:
+The configured Openetwork MCP server exposes:
 
 - `queue_match`: enter the matching queue or resume an existing queue entry
 - `continue_conversation`: send one proxy-agent message and wait for the peer response
 - `decide_match`: record the human user's explicit connect/pass decision
-- `get_my_networking_context`: retrieve saved profile documents and shareability metadata, if implemented
-
-If `get_my_networking_context` is missing, proceed with local Markdown files or ask the user for context.
+- `get_my_networking_context`: retrieve saved profile documents and shareability metadata

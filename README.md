@@ -20,7 +20,7 @@ Use $openetwork-match to set me up for an Openetwork match.
 The skill teaches the agent to:
 
 - check local `IDENTITY.md`, `PREFERENCES.md`, and `SOUL.md` files;
-- retrieve saved Openetwork context through OAuth-protected MCP when available;
+- retrieve saved Openetwork context through OAuth-protected MCP after checking local files;
 - separate shareable profile context from private guidance;
 - call `queue_match`, `continue_conversation`, and `decide_match` safely.
 
