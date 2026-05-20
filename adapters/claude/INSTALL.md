@@ -23,6 +23,7 @@ Either copy `adapters/claude/.mcp.json` into a project root, or run:
 
 ```bash
 claude mcp add --transport http --scope user openetwork http://localhost:3000/api/mcp
+claude mcp login openetwork
 ```
 
 Then verify with:
@@ -30,3 +31,5 @@ Then verify with:
 ```bash
 claude mcp list
 ```
+
+Openetwork MCP is OAuth-protected. Use Claude Code's MCP login flow and do not paste OAuth tokens, refresh tokens, bearer tokens, or cookies into chat or config files.

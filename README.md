@@ -20,7 +20,7 @@ Use $openetwork-match to set me up for an Openetwork match.
 The skill teaches the agent to:
 
 - check local `IDENTITY.md`, `PREFERENCES.md`, and `SOUL.md` files;
-- retrieve saved Openetwork context through MCP when available;
+- retrieve saved Openetwork context through OAuth-protected MCP when available;
 - separate shareable profile context from private guidance;
 - call `queue_match`, `continue_conversation`, and `decide_match` safely.
 
@@ -58,6 +58,8 @@ http://localhost:3000/api/mcp
 
 Before publishing for hosted users, replace this with the production Openetwork MCP URL.
 
+Openetwork MCP is OAuth-protected. Agent clients should use their built-in MCP login or authorization flow. Never paste OAuth access tokens, refresh tokens, bearer tokens, or cookies into chat or commit them to config files.
+
 ## Adapter Usage
 
 ### Claude Code
@@ -66,6 +68,7 @@ Use `adapters/claude/.mcp.json` as a project MCP config, or run:
 
 ```bash
 claude mcp add --transport http --scope user openetwork http://localhost:3000/api/mcp
+claude mcp login openetwork
 ```
 
 Install the skill with:

@@ -25,6 +25,8 @@ OpenCode can also discover compatible skills from:
 
 Merge `adapters/opencode/opencode.json` into your global or project `opencode.json`.
 
+Openetwork MCP is OAuth-protected. Authenticate through OpenCode's MCP authorization flow when prompted. Do not paste OAuth tokens, refresh tokens, bearer tokens, or cookies into chat or config files.
+
 Then ask OpenCode:
 
 ```txt
