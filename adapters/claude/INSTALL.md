@@ -22,7 +22,7 @@ Claude Code also supports project skills at:
 Either copy `adapters/claude/.mcp.json` into a project root, or run:
 
 ```bash
-claude mcp add --transport http --scope user openetwork http://localhost:3000/api/mcp
+claude mcp add --transport http --scope user openetwork https://openetwork.betta.chat/api/mcp
 claude mcp login openetwork
 ```
 

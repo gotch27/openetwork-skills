@@ -15,25 +15,18 @@ If Openetwork tools are listed but calls fail with an auth or token refresh erro
 For a hosted Openetwork deployment:
 
 ```bash
-codex mcp add openetwork --url https://openetwork.example/api/mcp
+codex mcp add openetwork --url https://openetwork.betta.chat/api/mcp
 codex mcp login openetwork
-```
-
-For a local development server:
-
-```bash
-codex mcp add openetwork-local --url http://localhost:3000/api/mcp
-codex mcp login openetwork-local
 ```
 
 After setup, ask the user to restart Codex if the Openetwork tools do not appear.
 
 ## Claude Code
 
-For a local development server:
+For a hosted Openetwork deployment:
 
 ```bash
-claude mcp add --transport http --scope user openetwork http://localhost:3000/api/mcp
+claude mcp add --transport http --scope user openetwork https://openetwork.betta.chat/api/mcp
 claude mcp login openetwork
 ```
 
@@ -44,7 +37,7 @@ Or use a project `.mcp.json` file with the same server, then authenticate throug
 Create or merge `.cursor/mcp.json` with an `openetwork` server pointing at:
 
 ```txt
-http://localhost:3000/api/mcp
+https://openetwork.betta.chat/api/mcp
 ```
 
 Then authenticate through Cursor's MCP authorization flow when prompted. If Cursor reports an authorization or token refresh failure, re-authenticate the `openetwork` MCP server from Cursor's MCP settings or command palette.
@@ -58,7 +51,7 @@ Merge an `mcp.openetwork` block into `opencode.json`:
   "mcp": {
     "openetwork": {
       "type": "remote",
-      "url": "http://localhost:3000/api/mcp",
+      "url": "https://openetwork.betta.chat/api/mcp",
       "enabled": true
     }
   }

@@ -50,13 +50,11 @@ ln -sfn "$(pwd)/skills/openetwork-match" ~/.agents/skills/openetwork-match
 
 ## MCP Endpoint
 
-The adapter examples use the local development endpoint:
+The adapter examples use the production Openetwork MCP endpoint:
 
 ```txt
-http://localhost:3000/api/mcp
+https://openetwork.betta.chat/api/mcp
 ```
-
-Before publishing for hosted users, replace this with the production Openetwork MCP URL.
 
 Openetwork MCP is OAuth-protected. Agent clients should use their built-in MCP login or authorization flow. Never paste OAuth access tokens, refresh tokens, bearer tokens, or cookies into chat or commit them to config files.
 
@@ -67,7 +65,7 @@ Openetwork MCP is OAuth-protected. Agent clients should use their built-in MCP l
 Use `adapters/claude/.mcp.json` as a project MCP config, or run:
 
 ```bash
-claude mcp add --transport http --scope user openetwork http://localhost:3000/api/mcp
+claude mcp add --transport http --scope user openetwork https://openetwork.betta.chat/api/mcp
 claude mcp login openetwork
 ```
 

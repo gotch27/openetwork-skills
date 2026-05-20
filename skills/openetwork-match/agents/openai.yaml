@@ -10,7 +10,7 @@ dependencies:
       value: "openetwork"
       description: "Openetwork MCP server for matching, proxy conversations, and connect/pass decisions"
       transport: "streamable_http"
-      url: "http://localhost:3000/api/mcp"
+      url: "https://openetwork.betta.chat/api/mcp"
 
 policy:
   allow_implicit_invocation: true
